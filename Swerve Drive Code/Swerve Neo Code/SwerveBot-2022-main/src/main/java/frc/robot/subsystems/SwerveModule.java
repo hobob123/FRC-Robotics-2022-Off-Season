@@ -31,6 +31,7 @@ public class SwerveModule {
   private RelativeEncoder driveEncoder;
   private RelativeEncoder integratedAngleEncoder;
   // private CANCoder angleEncoder;
+  private AnalogInput input;
   private AnalogPotentiometer angleEncoder;
 
   private final SparkMaxPIDController driveController;
@@ -46,8 +47,8 @@ public class SwerveModule {
 
     /* Angle Encoder Config */
     //angleEncoder = new
-    AnalogInput input = new AnalogInput(moduleConstants.thrcoderID);
-    AnalogPotentiometer angleEncoder = new AnalogPotentiometer(input, 360, moduleConstants.angleOffset);
+    input = new AnalogInput(moduleConstants.thrcoderID);
+    angleEncoder = new AnalogPotentiometer(input, 360, moduleConstants.angleOffset);
     // angleEncoder = new CANCoder(moduleConstants.cancoderID);
     // configAngleEncoder();
 
