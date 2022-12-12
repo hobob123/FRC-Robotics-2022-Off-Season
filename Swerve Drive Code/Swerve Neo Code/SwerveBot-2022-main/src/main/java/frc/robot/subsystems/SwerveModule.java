@@ -137,9 +137,8 @@ public class SwerveModule {
     driveEncoder.setPosition(0.0);
   }
 
-  public Rotation2d getCanCoder() {
-    return Rotation2d.fromDegrees(angleEncoder.get());
-  }
+  public Rotation2d getCanCoder() 
+  {return Rotation2d.fromDegrees(Math.abs(angleEncoder.get()%360));}
 
   public SwerveModuleState getState() {
     double velocity = driveEncoder.getVelocity();
