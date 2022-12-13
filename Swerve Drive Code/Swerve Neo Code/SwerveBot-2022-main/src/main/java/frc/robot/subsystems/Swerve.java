@@ -23,7 +23,7 @@ public class Swerve extends SubsystemBase {
 
   public Swerve() {
     gyro = new AHRS(SerialPort.Port.kMXP);//new Pigeon2(Constants.Swerve.pigeonID);
-    gyro.configFactoryDefault();
+    // gyro.configFactoryDefault();
     zeroGyro();
 
     swerveOdometry = new SwerveDriveOdometry(Constants.Swerve.swerveKinematics, getYaw());
@@ -84,7 +84,7 @@ public class Swerve extends SubsystemBase {
   }
 
   public void zeroGyro() {
-    gyro.setYaw(0);
+    gyro.reset();
   }
 
   public Rotation2d getYaw() {
