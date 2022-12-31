@@ -29,10 +29,10 @@ public final class Constants {
 
     public static final SwerveDriveKinematics swerveKinematics =
         new SwerveDriveKinematics(
-            new Translation2d(wheelBase / 2.0, -trackWidth / 2.0),
-            new Translation2d(wheelBase / 2.0, trackWidth / 2.0),
-            new Translation2d(-wheelBase / 2.0, trackWidth / 2.0),
-            new Translation2d(-wheelBase / 2.0, -trackWidth / 2.0));
+          new Translation2d(wheelBase / 2.0, trackWidth / 2.0),
+          new Translation2d(wheelBase / 2.0, -trackWidth / 2.0),
+          new Translation2d(-wheelBase / 2.0, trackWidth / 2.0),
+          new Translation2d(-wheelBase / 2.0, -trackWidth / 2.0));
 
     /* Swerve Compensation */
     public static final double voltageComp = 12.0;
@@ -42,9 +42,9 @@ public final class Constants {
     public static final int driveContinuousCurrentLimit = 80;
 
     /* Angle Motor PID Values */
-    public static final double angleKP = 0.05;
+    public static final double angleKP = 0.015;
     public static final double angleKI = 0.0;
-    public static final double angleKD = 0.00;
+    public static final double angleKD = 0.005;
     public static final double angleKFF = 0.0;
 
     /* Drive Motor PID Values */
@@ -85,7 +85,7 @@ public final class Constants {
       public static final int angleMotorID = 2;
       // public static final int canCoderID = 1;
       public static final int threncID = 0;
-      public static final double angleOffset = 240.59;
+      public static final double angleOffset = 180;
       public static final SwerveModuleConstants constants =
           new SwerveModuleConstants(driveMotorID, angleMotorID, threncID, angleOffset);
     }

@@ -46,7 +46,7 @@ public class RobotContainer {
             () -> -driver.getRawAxis(translationAxis),
             () -> -driver.getRawAxis(strafeAxis),
             () -> -driver.getRawAxis(rotationAxis),
-            () -> robotCentric.get()));
+            () -> true));
 
     // Configure the button bindings
     configureButtonBindings();
@@ -77,4 +77,7 @@ public class RobotContainer {
     // An ExampleCommand will run in autonomous
     return new exampleAuto(s_Swerve);
   }
+
+  // public Command getTestCommand()
+  // {}
 }
