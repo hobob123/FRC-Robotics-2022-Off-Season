@@ -48,7 +48,7 @@ public class SwerveModule {
     /* Angle Encoder Config */
     //angleEncoder = new
     input = new AnalogInput(moduleConstants.thrcoderID);
-    angleEncoder = new AnalogPotentiometer(input, 360, moduleConstants.angleOffset);
+    angleEncoder = new AnalogPotentiometer(input, 720);//, moduleConstants.angleOffset);
     // angleEncoder = new CANCoder(moduleConstants.cancoderID);
     // configAngleEncoder();
 
@@ -91,6 +91,7 @@ public class SwerveModule {
             : desiredState.angle
                 .getDegrees(); // Prevent rotating module if speed is less then 1%. Prevents
     // Jittering.
+    
     angleController.setReference(angle, ControlType.kPosition);
     lastAngle = angle;
   }
