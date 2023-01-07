@@ -68,7 +68,7 @@ public final class Constants {
     public static final double maxAngularVelocity = 11.5;
 
     /* Neutral Modes */
-    public static final IdleMode angleNeutralMode = IdleMode.kBrake;
+    public static final IdleMode angleNeutralMode = IdleMode.kCoast;
     public static final IdleMode driveNeutralMode = IdleMode.kBrake;
 
     /* Motor Inverts */
@@ -85,7 +85,7 @@ public final class Constants {
       public static final int angleMotorID = 2;
       // public static final int canCoderID = 1;
       public static final int threncID = 0;
-      public static final double angleOffset = 237.77;
+      public static final double angleOffset = 294.6;
       public static final SwerveModuleConstants constants =
           new SwerveModuleConstants(driveMotorID, angleMotorID, threncID, angleOffset);
     }
@@ -96,7 +96,7 @@ public final class Constants {
       public static final int angleMotorID = 10;
       // public static final int canCoderID = 2;
       public static final int threncID = 1;
-      public static final double angleOffset = -5.46;
+      public static final double angleOffset = 182.75;
       public static final SwerveModuleConstants constants =
           new SwerveModuleConstants(driveMotorID, angleMotorID, threncID, angleOffset);
     }
@@ -107,7 +107,7 @@ public final class Constants {
       public static final int angleMotorID = 21;
       // public static final int canCoderID = 3;
       public static final int threncID = 2;
-      public static final double angleOffset = 256.32;
+      public static final double angleOffset = 256.32; // broken encoder 
       public static final SwerveModuleConstants constants =
           new SwerveModuleConstants(driveMotorID, angleMotorID, threncID, angleOffset);
     }
@@ -118,7 +118,7 @@ public final class Constants {
       public static final int angleMotorID = 30;
       // public static final int canCoderID = 4;
       public static final int threncID = 3;
-      public static final double angleOffset = 191.97;
+      public static final double angleOffset = 277.89;
       public static final SwerveModuleConstants constants =
           new SwerveModuleConstants(driveMotorID, angleMotorID, threncID, angleOffset);
     }

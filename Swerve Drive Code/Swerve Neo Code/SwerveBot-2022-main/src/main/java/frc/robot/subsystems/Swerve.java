@@ -107,7 +107,7 @@ public class Swerve extends SubsystemBase {
           "Mod " + mod.moduleNumber + " Velocity", mod.getState().speedMetersPerSecond);
 
       SmartDashboard.putNumber(
-        "Mod " + mod.moduleNumber + "position sent to", mod.getCanCoder().getDegrees() + Constants.Swerve.Mod0.angleOffset);
+        "Mod " + mod.moduleNumber + "position sent to", mod.getCanCoder().getDegrees() - Constants.Swerve.Mod0.angleOffset);
     }
   }
 }
